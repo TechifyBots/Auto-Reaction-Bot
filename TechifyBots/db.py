@@ -3,6 +3,7 @@ from config import DB_URI, DB_NAME
 from motor import motor_asyncio
 from pymongo import ReturnDocument
 from pymongo.errors import DuplicateKeyError
+from bson import ObjectId
 
 client = motor_asyncio.AsyncIOMotorClient(DB_URI)
 db = client[DB_NAME]
@@ -55,10 +56,20 @@ class Techifybots:
             print("Error in get_all_users:", e)
             return []
 
-    async def delete_user(self, user_id: int) -> bool:
+    async def delete_user(self, identifier: int | str | ObjectId) -> bool:
         try:
-            result = await self.users.delete_one({"user_id": int(user_id)})
-            self.cache.pop(int(user_id), None)
+            query = {}
+            if isinstance(identifier, int):
+                query = {"user_id": identifier}
+                self.cache.pop(identifier, None)
+            elif isinstance(identifier, (str, ObjectId)):
+                query = {"_id": ObjectId(identifier)} if isinstance(identifier, str) else {"_id": identifier}
+                doc = await self.users.find_one(query)
+                if doc and "user_id" in doc:
+                    self.cache.pop(int(doc["user_id"]), None)
+            else:
+                return False
+            result = await self.users.delete_one(query)
             return result.deleted_count > 0
         except Exception as e:
             print("Error in delete_user:", e)
