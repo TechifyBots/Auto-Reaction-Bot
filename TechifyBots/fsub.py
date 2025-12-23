@@ -101,7 +101,7 @@ async def get_fsub(bot: Client, message: Message) -> bool:
     await message.reply(f"**🎭 {message.from_user.mention}, You haven’t joined my channel yet.\nPlease join using the buttons below.**", reply_markup=InlineKeyboardMarkup(buttons))
     return False
 
-@Client.on_message(filters.private & ~filters.user(ADMIN), group=-1)
+@Client.on_message(filters.private & ~filters.user(ADMIN), group=-10)
 async def global_fsub_checker(client: Client, message: Message):
     if not IS_FSUB:
         return
