@@ -7,7 +7,6 @@ from config import *
 import asyncio
 from Script import text
 from .db import tb
-from .fsub import get_fsub
 from collections import defaultdict
 
 def parse_button_markup(text: str):
@@ -46,7 +45,6 @@ async def start_cmd(client, message):
                 bot.username
             )
         )
-    if IS_FSUB and not await get_fsub(client, message):return
     await message.reply_photo(
         photo=random.choice(PICS),
         caption=text.START.format(message.from_user.mention),
