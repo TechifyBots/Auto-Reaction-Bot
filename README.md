@@ -32,7 +32,9 @@
 - `ADMIN` : Your Telegram User ID
 - `DB_URI` : MongoDB database get from [here](https://youtu.be/j8LIuM7vv18)
 - `LOG_CHANNEL` : Your Log channel ID.
-- `AUTH_CHANNELS` : Your FSUB channels ID.
+- `FSUB_EXPIRE` : Your FSUB link expire time.
+- `AUTH_CHANNELS` : Your Public & Private FSUB channels ID.
+- `AUTH_REQ_CHANNELS` : Your Private Request FSUB channels ID.
 </details>
 
 ### 😍 COMMANDS
