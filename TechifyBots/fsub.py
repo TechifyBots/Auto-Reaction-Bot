@@ -115,6 +115,6 @@ async def get_fsub(bot: Client, message: Message) -> bool:
                 title, link = missing[i + j]
                 row.append(InlineKeyboardButton(f"{i + j + 1}. {title}", url=link))
         buttons.append(row)
-    buttons.append([InlineKeyboardButton("🔄 Try Again", url=f"https://t.me/{bot_user.username}?start=start")])
+    buttons.append([InlineKeyboardButton("🔄 Try Again", url=f"https://telegram.me/{bot_user.username}?start=start")])
     await message.reply(f"**🎭 {message.from_user.mention}, As I see, you haven’t joined my channel yet.\nPlease join by clicking the button below.**", reply_markup=InlineKeyboardMarkup(buttons))
     return False
