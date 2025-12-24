@@ -4,7 +4,8 @@ from typing import List
 API_ID = os.environ.get("API_ID", "")
 API_HASH = os.environ.get("API_HASH", "")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-ADMIN = int(os.environ.get("ADMIN", "1255023013"))
+ADMINS = list(map(int, os.environ.get("ADMINS", "1255023013").split())) # Add Multiple admin ids
+
 PICS = (os.environ.get("PICS", "https://i.ibb.co/svYMm2Hs/pic.jpg https://i.ibb.co/QLXhn7F/pic.jpg https://i.ibb.co/MkBcnY2j/pic.jpg")).split()
 
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002686843200"))
