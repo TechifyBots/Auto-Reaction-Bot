@@ -29,7 +29,7 @@
 - `API_HASH` : Get From [Here](https://youtu.be/y5FwAobQ-Kc)
 - `BOT_TOKEN` : Get From [BotFather](https://youtu.be/aJILCCXfNVM)
 - `PICS` - Your bot start images (you can add multiple images)
-- `ADMIN` : Your Telegram User ID
+- `ADMINS` : Your Telegram User ID
 - `DB_URI` : MongoDB database get from [here](https://youtu.be/j8LIuM7vv18)
 - `LOG_CHANNEL` : Your Log channel ID.
 - `IS_FSUB` : True/False FSUB accordingly.
