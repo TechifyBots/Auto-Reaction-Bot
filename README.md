@@ -34,8 +34,8 @@
 - `LOG_CHANNEL` : Your Log channel ID.
 - `IS_FSUB` : True/False FSUB accordingly.
 - `FSUB_EXPIRE` : Your FSUB link expire time.
-- `AUTH_CHANNELS` : Your Public & Private FSUB channels ID.
-- `AUTH_REQ_CHANNELS` : Your Private Request FSUB channels ID.
+- `AUTH_CHANNELS` : Your Public & Private FSUB channels IDs.
+- `AUTH_REQ_CHANNELS` : Your Private Request FSUB channels IDs.
 </details>
 
 ### 😍 COMMANDS
