@@ -6,7 +6,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from config import *
 import asyncio
 from Script import text
-from .db import tb
+from .database import tb
 from collections import defaultdict
 
 def parse_button_markup(text: str):
