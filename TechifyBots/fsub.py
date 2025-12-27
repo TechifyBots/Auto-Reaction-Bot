@@ -1,7 +1,7 @@
 import logging
 import datetime
 from motor.motor_asyncio import AsyncIOMotorClient
-from pyrogram import Client, filters
+from pyrogram import Client, filters, StopPropagation
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ChatJoinRequest
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired
 from pyrogram.enums import ParseMode
@@ -101,8 +101,10 @@ async def get_fsub(bot: Client, message: Message) -> bool:
     await message.reply(f"**🎭 {message.from_user.mention}, You haven’t joined my channel yet.\nPlease join using the buttons below.**", reply_markup=InlineKeyboardMarkup(buttons))
     return False
 
-@Client.on_message(filters.private & ~filters.user(ADMIN), group=-10)
+@Client.on_message(filters.private & ~filters.user(ADMIN) & ~filters.bot & ~filters.service & ~filters.me, group=-10)
 async def global_fsub_checker(client: Client, message: Message):
     if not IS_FSUB:
         return
-    await get_fsub(client, message)
+    allowed = await get_fsub(client, message)
+    if not allowed:
+        raise StopPropagation
