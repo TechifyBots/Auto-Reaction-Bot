@@ -16,11 +16,7 @@ class TechifyBots:
             self.join_requests.create_index("created_at", expireAfterSeconds=FSUB_EXPIRE * 60)
 
     async def add_join_req(self, user_id: int, channel_id: int):
-        await self.join_requests.update_one(
-            {"user_id": user_id},
-            {"$addToSet": {"channels": channel_id}, "$setOnInsert": {"created_at": datetime.datetime.utcnow()}},
-            upsert=True
-        )
+        await self.join_requests.update_one({"user_id": user_id}, {"$addToSet": {"channels": channel_id}, "$setOnInsert": {"created_at": datetime.datetime.utcnow()}}, upsert=True)
 
     async def has_joined_channel(self, user_id: int, channel_id: int) -> bool:
         doc = await self.join_requests.find_one({"user_id": user_id})
