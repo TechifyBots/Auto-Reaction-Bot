@@ -4,7 +4,6 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from pyrogram import Client, filters, StopPropagation
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ChatJoinRequest
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired
-from pyrogram.enums import ParseMode
 from config import AUTH_CHANNELS, AUTH_REQ_CHANNELS, ADMIN, FSUB_EXPIRE, DB_URI, DB_NAME, IS_FSUB
 
 class TechifyBots:
@@ -12,11 +11,9 @@ class TechifyBots:
         client = AsyncIOMotorClient(DB_URI)
         db = client[DB_NAME]
         self.join_requests = db["join_requests"]
-        if FSUB_EXPIRE > 0:
-            self.join_requests.create_index("created_at", expireAfterSeconds=FSUB_EXPIRE * 60)
 
     async def add_join_req(self, user_id: int, channel_id: int):
-        await self.join_requests.update_one({"user_id": user_id}, {"$addToSet": {"channels": channel_id}, "$setOnInsert": {"created_at": datetime.datetime.utcnow()}}, upsert=True)
+        await self.join_requests.update_one({"user_id": user_id}, {"$addToSet": {"channels": channel_id}, "$set": {"created_at": datetime.datetime.utcnow()}}, upsert=True)
 
     async def has_joined_channel(self, user_id: int, channel_id: int) -> bool:
         doc = await self.join_requests.find_one({"user_id": user_id})
@@ -27,10 +24,7 @@ class TechifyBots:
 
 tb = TechifyBots()
 
-def is_auth_req_channel(_, __, update):
-    return update.chat.id in AUTH_REQ_CHANNELS
-
-@Client.on_chat_join_request(filters.create(is_auth_req_channel))
+@Client.on_chat_join_request(filters.chat(AUTH_REQ_CHANNELS))
 async def join_reqs(client: Client, message: ChatJoinRequest):
     await tb.add_join_req(message.from_user.id, message.chat.id)
 
@@ -57,14 +51,14 @@ async def is_subscribed(bot: Client, user_id: int, expire_at):
             pass
     return missing
 
-async def is_req_subscribed(bot: Client, user_id: int, expire_at):
+async def is_req_subscribed(bot: Client, user_id: int):
     missing = []
     for channel_id in AUTH_REQ_CHANNELS:
         if await tb.has_joined_channel(user_id, channel_id):
             continue
         try:
             chat = await bot.get_chat(channel_id)
-            invite = await bot.create_chat_invite_link(channel_id, creates_join_request=True, expire_date=expire_at)
+            invite = await bot.create_chat_invite_link(channel_id, creates_join_request=True)
             missing.append((chat.title, invite.invite_link))
         except ChatAdminRequired:
             logging.error(f"Bot not admin in request channel {channel_id}")
@@ -81,7 +75,7 @@ async def get_fsub(bot: Client, message: Message) -> bool:
     if AUTH_CHANNELS:
         missing.extend(await is_subscribed(bot, user_id, expire_at))
     if AUTH_REQ_CHANNELS:
-        missing.extend(await is_req_subscribed(bot, user_id, expire_at))
+        missing.extend(await is_req_subscribed(bot, user_id))
     if not missing:
         return True
     bot_user = await bot.get_me()
