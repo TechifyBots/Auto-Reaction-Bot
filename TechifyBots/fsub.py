@@ -95,6 +95,5 @@ async def get_fsub(bot: Client, message: Message) -> bool:
 async def global_fsub_checker(client: Client, message: Message):
     if not IS_FSUB:
         return
-    allowed = await get_fsub(client, message)
-    if not allowed:
+    if not await get_fsub(client, message):
         raise StopPropagation
