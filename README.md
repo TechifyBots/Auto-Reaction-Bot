@@ -23,7 +23,6 @@
 
 ### 😎 Deployment
 
-<details><summary>Tap On Me For Bot Deployment</summary>
 
 **Step 1** : Create a Cloudflare Account 
 
@@ -47,7 +46,7 @@ https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=<YOUR_WORKER_URL>
 Replace the placeholders:
 - `<BOT_TOKEN>` - Your bot token from BotFather
 - `<YOUR_WORKER_URL>` - Your deployed Cloudflare Worker URL.
-</details>
+
 
 ### 💞 CREDIT
 - [TechifyBots](https://github.com/TechifyBots)
