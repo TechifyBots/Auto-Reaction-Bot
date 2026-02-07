@@ -49,7 +49,7 @@ Replace the placeholders:
 
 
 ### 💞 CREDIT
-- [TechifyBots](https://github.com/TechifyBots)
+- [ImKrishana](https://github.com/ImKrishana)
 
 ### 😇 [SUPPORT](https://techifybots.github.io/PayWeb)
 
