@@ -1,6 +1,6 @@
 <h1 align="center">
  <b><a href="https://youtu.be/UjsJXQOEeIA" target="/blank">Auto Reaction Bot</a>
-</h1>
+</b></h1>
 
 <p align="center">🩷 Thanks for Being Here 🩷</p>
 
