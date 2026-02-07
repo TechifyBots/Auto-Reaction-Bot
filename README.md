@@ -24,7 +24,7 @@
 ### 😎 Deployment
 
 
-**Step 1** : Create a Cloudflare Account 
+**Step 1** : Create a [Cloudflare](https://www.cloudflare.com) Account 
 
 **Step 2** : Go to Workers & Pages Tab, and Click on Create Worker and Choose a Sub Domain
 
