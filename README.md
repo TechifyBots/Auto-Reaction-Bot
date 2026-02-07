@@ -14,39 +14,39 @@
 - Supports all type of emojies
 - work in both channels & groups
 - Fully modified repo
-- Stats & Broadcast feature available
-- Fsub & Log channel support
-- Deploy To Koyeb + Heroku + Railway.
+- Built on Cloudflare Workers
+- Bot is serverless, Lightweight & efficient
+- No hosting platform required
 - [Developer support](https://telegram.me/TechifySupport) 24x7
 </details>
+ 
 
+### 😎 Deployment
 
-### 🔥 VARIABLES
+<details><summary>Tap On Me For Bot Deployment</summary>
 
-<details><summary>Tap On Me For Environment Variable</summary>
+**Step 1** : Create a Cloudflare Account 
 
-- `API_ID` : Get From [Here](https://youtu.be/y5FwAobQ-Kc)
-- `API_HASH` : Get From [Here](https://youtu.be/y5FwAobQ-Kc)
-- `BOT_TOKEN` : Get From [BotFather](https://youtu.be/aJILCCXfNVM)
-- `PICS` - Your bot start images (you can add multiple images)
-- `ADMIN` : Your Telegram User ID
-- `DB_URI` : MongoDB database get from [here](https://youtu.be/j8LIuM7vv18)
-- `LOG_CHANNEL` : Your Log channel ID.
-- `IS_FSUB` : True/False FSUB accordingly.
-- `FSUB_EXPIRE` : Your FSUB link expire time.
-- `AUTH_CHANNELS` : Your Public & Private FSUB channels IDs.
-- `AUTH_REQ_CHANNELS` : Your Private Request FSUB channels IDs.
-</details>
+**Step 2** : Go to Workers & Pages Tab, and Click on Create Worker and Choose a Sub Domain
 
-### 😍 COMMANDS
+**Step 3** : Copy code from Repo's react.js file and Paste it
 
-<details><summary>Tap On Me For Commands</summary>
+**Step 4** : Add the `BOT_TOKEN` Secret:
+    - Go back to your worker's dashboard.
+    - Click on the **Settings** tab, then select **Variables**.
+    - Under **Environment Variables**, click **Add variable**.
+    - Enter `BOT_TOKEN` as the **Variable name** and paste your Telegram bot token as the **Value**.
 
+**Step 5** : Click on Deploy and your Site is Ready !
+
+### Step 5: Webhook Setup
+
+```bash
+https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=<YOUR_WORKER_URL>
 ```
-start - Start The Bot
-broadcast - (admin only) Broadcast message to bot users
-stats - (admin only) check bots stats
-```
+Replace the placeholders:
+- `<BOT_TOKEN>` - Your bot token from BotFather
+- `<YOUR_WORKER_URL>` - Your deployed Cloudflare Worker URL.
 </details>
 
 ### 💞 CREDIT
