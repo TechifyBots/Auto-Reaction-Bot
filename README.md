@@ -39,7 +39,7 @@
 
 **Step 5** : Click on Deploy and your Site is Ready !
 
-### Step 5: Webhook Setup
+**Step 6** : Webhook Setup
 
 ```bash
 https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=<YOUR_WORKER_URL>
