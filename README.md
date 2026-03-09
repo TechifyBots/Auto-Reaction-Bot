@@ -55,6 +55,8 @@ Replace the placeholders:
 
 ### 🥳 [DEVELOPER](https://instagram.com/ImRahulDhankhar)
 
+### 🚀 [DEPLOYMENT GUIDE](https://youtu.be/eX7ADzcEoic)
+
 ### 📌 NOTE
 
 𝘊𝘰𝘱𝘺𝘪𝘯𝘨 𝘰𝘳 𝘚𝘦𝘭𝘭𝘪𝘯𝘨 𝘵𝘩𝘪𝘴 𝘳𝘦𝘱𝘰 𝘪𝘴 𝘴𝘵𝘳𝘪𝘤𝘵𝘭𝘺 𝘱𝘳𝘰𝘩𝘪𝘣𝘪𝘵𝘦𝘥.</b>
