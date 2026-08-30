@@ -284,9 +284,9 @@ See the **[LICENSE](./LICENSE)** file for complete details.
 
 <div align="center">
 
-<a href="https://telegram.me/TechifyBots"><img src="https://tgcards.vercel.app/?username=TechifyBots&fontFamily=%27Times+New+Roman%27%2C+serif&verified=true" alt="Channel"></a>
-
-<a href="https://t.me/TechifySupport"><img src="https://tgcards.vercel.app/?username=TechifySupport&theme=light" alt="Group"></a>
+<a href="https://telegram.me/TechifyBots"><img src="https://tgcards.vercel.app/?username=TechifyBots&theme=light&verified=true" alt="Channel"></a>
+<br>
+<a href="https://telegram.me/TechifySupport"><img src="https://tgcards.vercel.app/?username=TechifySupport&theme=light" alt="Group"></a>
 
 </div>
 
