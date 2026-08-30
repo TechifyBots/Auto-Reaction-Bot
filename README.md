@@ -16,6 +16,8 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 [![GitHub Forks](https://img.shields.io/github/forks/TechifyBots/Auto-Reaction-Bot?style=for-the-badge)](https://github.com/TechifyBots/Auto-Reaction-Bot/fork)
 <br>
 [![Repo Size](https://img.shields.io/github/languages/code-size/TechifyBots/Auto-Reaction-Bot?style=for-the-badge&color=8B5CF6)](https://github.com/TechifyBots/Auto-Reaction-Bot)
+<br>
+[![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://telegram.me/AlyaReactionBot)
 
 </div>
 
