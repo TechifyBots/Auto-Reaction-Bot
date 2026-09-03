@@ -152,13 +152,13 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 <summary><b>👤 User Commands</b></summary>
 
 ```text
-/start - Start the bot and view the main menu.
-/help - Display all available commands.
-/about - Learn more about the project.
-/ping - Check the bot's response time.
-/stats - View bot statistics.
-/reactions - View configured reaction emojis.
-/donate - Support the development of the project.
+start - Start the bot and view the main menu.
+help - Display all available commands.
+about - Learn more about the project.
+ping - Check the bot's response time.
+stats - View bot statistics.
+reactions - View configured reaction emojis.
+donate - Support the development of the project.
 ```
 
 </details>
@@ -166,13 +166,13 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 <details>
 <summary><b>👥 Chat Admin Commands</b></summary>
 
-```text
-/pause - Pause reactions in the current chat.
-/resume - Resume reactions in the current chat.
-/welcome - Configure welcome messages.
-/goodbye - Configure goodbye messages.
-/setreactions - Configure reaction emojis.
-/randomlevel - Set the reaction frequency.
+```
+pause - Pause reactions in the current chat.
+resume - Resume reactions in the current chat.
+welcome - Configure welcome messages.
+goodbye - Configure goodbye messages.
+setreactions - Configure reaction emojis.
+randomlevel - Set the reaction frequency.
 ```
 
 </details>
@@ -180,14 +180,14 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 <details>
 <summary><b>🔒 Owner Commands</b></summary>
 
-```text
-/log - View recent logs.
-/chats - View connected chats.
-/leave - Remove the bot from a chat.
-/restrict - Restrict a chat.
-/unrestrict - Remove chat restrictions.
-/broadcast - Broadcast messages.
-/setwebhook - Configure the webhook.
+```
+log - View recent logs.
+chats - View connected chats.
+leave - Remove the bot from a chat.
+restrict - Restrict a chat.
+unrestrict - Remove chat restrictions.
+broadcast - Broadcast messages.
+setwebhook - Configure the webhook.
 ```
 </details>
 
