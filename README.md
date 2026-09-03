@@ -151,7 +151,7 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 <details>
 <summary><b>👤 User Commands</b></summary>
 
-```text
+```
 start - Start the bot and view the main menu.
 help - Display all available commands.
 about - Learn more about the project.
