@@ -48,8 +48,7 @@ export const helpMessage = `📚 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 — 𝗚𝘂�
 export const adminPanelMessage = `👑 𝗔𝗱𝗺𝗶𝗻 𝗣𝗮𝗻𝗲𝗹 — 𝗢𝘄𝗻𝗲𝗿 𝗢𝗻𝗹𝘆
 
 🔹 <code>/broadcast &lt;msg&gt;</code> — 𝖲𝖾𝗇𝖽 𝖺 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗍𝗈 𝖺𝗅𝗅 𝖼𝗁𝖺𝗍𝗌.
-🔹 <code>/leave &lt;chat_id&gt;</code> — 𝖫𝖾𝖺𝗏𝖾 𝖺 𝗌𝗉𝖾𝖼𝗂𝖿𝗂𝖼 𝖼𝗁𝖺𝗍.
-🔹 <code>/remove &lt;chat_id&gt;</code> — 𝖠𝗅𝗂𝖺𝗌 𝖿𝗈𝗋 /leave.
+🔹 <code>/leave &lt;chat_id&gt;</code> — 𝖫𝖾𝖺𝗏𝖾 𝖺 𝗌𝗉𝖾𝖼𝗂𝖿𝗂𝖼 𝖼𝗁𝖺𝗍. 𝖠𝗅𝗂𝖺𝗌: <code>/remove</code>.
 🔹 <code>/chats</code> — 𝖵𝗂𝖾𝗐 𝖺𝗅𝗅 𝖺𝖼𝗍𝗂𝗏𝖾 𝖼𝗁𝖺𝗍𝗌.
 🔹 <code>/restrict &lt;chat_id&gt;</code> — 𝖱𝖾𝗌𝗍𝗋𝗂𝖼𝗍 𝖺 𝖼𝗁𝖺𝗍.
 🔹 <code>/unrestrict &lt;chat_id&gt;</code> — 𝖱𝖾𝗆𝗈𝗏𝖾 𝗋𝖾𝗌𝗍𝗋𝗂𝖼𝗍𝗂𝗈𝗇.
