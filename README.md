@@ -12,7 +12,7 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 
 [![Last Commit](https://img.shields.io/github/last-commit/TechifyBots/Auto-Reaction-Bot?style=for-the-badge)](https://github.com/TechifyBots/Auto-Reaction-Bot/commits)
 <br>
-[![GitHub Stars](https://img.shields.io/github/stars/TechifyBots/Auto-Reaction-Bot?style=for-the-badge)](https://github.com/TechifyBots/Auto-Reaction-Bot/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/TechifyBots/Auto-Reaction-Bot?style=for-the-badge)](https://github.com/TechifyBots)
 [![GitHub Forks](https://img.shields.io/github/forks/TechifyBots/Auto-Reaction-Bot?style=for-the-badge)](https://github.com/TechifyBots/Auto-Reaction-Bot/fork)
 <br>
 [![Repo Size](https://img.shields.io/github/languages/code-size/TechifyBots/Auto-Reaction-Bot?style=for-the-badge&color=8B5CF6)](https://github.com/TechifyBots/Auto-Reaction-Bot)
